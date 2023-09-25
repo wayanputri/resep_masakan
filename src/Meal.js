@@ -4,7 +4,7 @@ const Meal = () => {
 	const [search, setSearch] = useState("");
 	const [Mymeal, setMeal] = useState();
 	const searchMeal = (evt) => {
-		if (evt.key == "Enter") {
+		if (evt.key === "Enter") {
 			fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
 				.then((res) => res.json())
 				.then((data) => {
